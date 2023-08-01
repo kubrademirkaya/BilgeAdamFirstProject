@@ -15,53 +15,32 @@ class ForgotPasswordVC: UIViewController {
     
     weak var passwordTransfer: PasswordProtocolDelegate?
     
-    private lazy var txtNewPassword:UITextField = {
-        let txt = UITextField()
-        txt.placeholder = "New Password"
-        txt.font = UIFont(name: Font.avenirNext.rawValue, size: 16)
-        txt.textAlignment = .center
-        txt.layer.borderWidth = 0.5
-        txt.layer.borderColor = UIColor.gray.cgColor
-        txt.layer.cornerRadius = 8
-        let smallImage = UIImageView(frame: CGRect(x: 11, y: 11, width: 22, height: 22))
-        smallImage.image = UIImage(systemName: "key")
-        smallImage.tintColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
-        smallImage.contentMode = .scaleAspectFit
-        let leftView = UIView(frame: CGRect(x: 0, y: 0, width: 44, height: 44))
-        leftView.addSubview(smallImage)
-        txt.leftView = leftView
-        txt.leftViewMode = .always
-        txt.isSecureTextEntry = true
-        return txt
+    private lazy var txtNewPassword:CustomTextField = {
+        let textField = CustomTextField()
+        textField.placeholder = "Yeni Şİfre"
+        
+        textField.viewSide = .left(image: UIImage(systemName: "key")!)
+        
+        textField.isSecureTextEntry = true
+        return textField
     }()
     
-    private lazy var txtValidPassword:UITextField = {
-        let txt = UITextField()
-        txt.placeholder = "New Password"
-        txt.font = UIFont(name: Font.avenirNext.rawValue, size: 16)
-        txt.textAlignment = .center
-        txt.layer.borderWidth = 0.5
-        txt.layer.borderColor = UIColor.gray.cgColor
-        txt.layer.cornerRadius = 8
-        let smallImage = UIImageView(frame: CGRect(x: 11, y: 11, width: 22, height: 22))
-        smallImage.image = UIImage(systemName: "key")
-        smallImage.tintColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
-        smallImage.contentMode = .scaleAspectFit
-        let leftView = UIView(frame: CGRect(x: 0, y: 0, width: 44, height: 44))
-        leftView.addSubview(smallImage)
-        txt.leftView = leftView
-        txt.leftViewMode = .always
-        txt.isSecureTextEntry = true
-        return txt
+    private lazy var txtValidPassword:CustomTextField = {
+        let textField = CustomTextField()
+        textField.placeholder = "Yeni Şifre Doğrulama"
+        
+        textField.viewSide = .left(image: UIImage(systemName: "key")!)
+        
+        textField.isSecureTextEntry = true
+        return textField
     }()
     
     private lazy var NextButton:UIButton = {
         let button = UIButton()
         button.setTitle("Devam et", for: .normal)
-        button.backgroundColor = #colorLiteral(red: 0.2549019608, green: 0.6117647059, blue: 1, alpha: 1)
-        button.setTitleColor(.white, for: .normal)
+        button.backgroundColor = #colorLiteral(red: 0.5607843137, green: 0.2470588235, blue: 0.3647058824, alpha: 1)
+        button.setTitleColor( #colorLiteral(red: 0.8588235294, green: 0.8, blue: 0.9294117647, alpha: 1), for: .normal)
         button.layer.borderWidth = 0.5
-        button.layer.borderColor = UIColor.blue.cgColor
         button.layer.cornerRadius = 8
         button.addTarget(self, action: #selector(nextButtonTapped), for: .touchUpInside)
         return button
@@ -71,7 +50,7 @@ class ForgotPasswordVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = .white
+        self.view.backgroundColor = #colorLiteral(red: 0.09623382241, green: 0.07863570005, blue: 0.1982927024, alpha: 1)
         
         setupViews()
     }

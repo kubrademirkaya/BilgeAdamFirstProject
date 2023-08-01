@@ -27,60 +27,40 @@ class LoginVC: UIViewController, SignUpDelegate, PasswordProtocolDelegate {
     
     private lazy var labelWelcome:UILabel = {
         let label = UILabel()
-        label.textColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
+        label.textColor = #colorLiteral(red: 0.5607843137, green: 0.2470588235, blue: 0.3647058824, alpha: 1)
         label.text = "Hoşgeldiniz"
-        label.font = UIFont(name: Font.avenirNextBold.rawValue, size: 25)
+        label.font = UIFont(name: "NunitoSans_10pt-SemiBold", size: 30)
         label.textAlignment = .center
         return label
     }()
     
-    private lazy var txtUsername:UITextField = {
-        let txt = UITextField()
-        txt.placeholder = "Username"
-        txt.font = UIFont(name: Font.avenirNext.rawValue, size: 16)
-        txt.textAlignment = .center
-        txt.layer.borderWidth = 0.5
-        txt.layer.borderColor = UIColor.gray.cgColor
-        txt.layer.cornerRadius = 8
-        let smallImage = UIImageView(frame: CGRect(x: 11, y: 11, width: 22, height: 22))
-        smallImage.image = UIImage(systemName: "person.fill")
-        smallImage.tintColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
-        smallImage.contentMode = .scaleAspectFit
-        let leftView = UIView(frame: CGRect(x: 0, y: 0, width: 44, height: 44))
-        leftView.addSubview(smallImage)
-        txt.leftView = leftView
-        txt.leftViewMode = .always
+    private lazy var txtUsername:CustomTextField = {
+        let txt = CustomTextField()
+        txt.placeholder = "Kullanıcı Adı"
+        
+        txt.viewSide = .left(image: UIImage(systemName: "person.fill")!)
+        
         return txt
     }()
     
-    private lazy var txtPassword:UITextField = {
-        let txt = UITextField()
-        txt.placeholder = "Password"
+    private lazy var txtPassword:CustomTextField = {
+        let txt = CustomTextField()
+        txt.placeholder = "Şifre"
         
-        txt.font = UIFont(name: Font.avenirNext.rawValue, size: 16)
+        txt.viewSide = .left(image: UIImage(systemName: "key")!)
+        
         txt.isSecureTextEntry = true
-        txt.textAlignment = .center
-        txt.layer.borderWidth = 0.5
-        txt.layer.borderColor = UIColor.gray.cgColor
-        txt.layer.cornerRadius = 8
-        let smallImage = UIImageView(frame: CGRect(x: 11, y: 11, width: 22, height: 22))
-        smallImage.image = UIImage(systemName: "key")
-        smallImage.tintColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
-        smallImage.contentMode = .scaleAspectFit
-        let leftView = UIView(frame: CGRect(x: 0, y: 0, width: 44, height: 44))
-        leftView.addSubview(smallImage)
-        txt.leftView = leftView
-        txt.leftViewMode = .always
+        
         return txt
     }()
     
     private lazy var loginButton:UIButton = {
         let button = UIButton()
         button.setTitle("Giriş Yap", for: .normal)
-        button.backgroundColor = #colorLiteral(red: 0.2549019608, green: 0.6117647059, blue: 1, alpha: 1)
+        button.setTitleColor(#colorLiteral(red: 0.8588235294, green: 0.8, blue: 0.9294117647, alpha: 1), for: .normal)
+        button.backgroundColor = #colorLiteral(red: 0.5607843137, green: 0.2470588235, blue: 0.3647058824, alpha: 1)
         button.layer.borderWidth = 0.5
         button.layer.cornerRadius = 8
-        button.layer.borderColor = UIColor.blue.cgColor
         button.addTarget(self, action: #selector(loginButtonTapped), for: .touchUpInside)
         return button
     }()
@@ -88,8 +68,8 @@ class LoginVC: UIViewController, SignUpDelegate, PasswordProtocolDelegate {
     private lazy var forgotPasswordButton:UIButton = {
         let button = UIButton()
         button.setTitle("Şifremi unuttum", for: .normal)
-        button.backgroundColor = .white
-        button.setTitleColor( #colorLiteral(red: 0.2549019608, green: 0.6117647059, blue: 1, alpha: 1), for: .normal)
+        button.backgroundColor = #colorLiteral(red: 0.09623382241, green: 0.07863570005, blue: 0.1982927024, alpha: 1)
+        button.setTitleColor( #colorLiteral(red: 0.8588235294, green: 0.8, blue: 0.9294117647, alpha: 1), for: .normal)
         button.addTarget(self, action: #selector(forgotPasswordButtonTapped), for: .touchUpInside)
         return button
     }()
@@ -97,10 +77,10 @@ class LoginVC: UIViewController, SignUpDelegate, PasswordProtocolDelegate {
     private lazy var signUpButton:UIButton = {
         let button = UIButton()
         button.setTitle("Kayıt Ol", for: .normal)
-        button.backgroundColor = #colorLiteral(red: 0.2549019608, green: 0.6117647059, blue: 1, alpha: 1)
+        button.backgroundColor = #colorLiteral(red: 0.5607843137, green: 0.2470588235, blue: 0.3647058824, alpha: 1)
+        button.setTitleColor(#colorLiteral(red: 0.8588235294, green: 0.8, blue: 0.9294117647, alpha: 1), for: .normal)
         button.layer.borderWidth = 0.5
         button.layer.cornerRadius = 8
-        button.layer.borderColor = UIColor.blue.cgColor
         button.addTarget(self, action: #selector(signUpButtonTapped), for: .touchUpInside)
         return button
     }()
@@ -109,7 +89,7 @@ class LoginVC: UIViewController, SignUpDelegate, PasswordProtocolDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.view.backgroundColor = .white
+        self.view.backgroundColor = #colorLiteral(red: 0.09623382241, green: 0.07863570005, blue: 0.1982927024, alpha: 1)
         
         //delegate?.passwordTransfer(newPassword: password)
         
@@ -136,7 +116,7 @@ class LoginVC: UIViewController, SignUpDelegate, PasswordProtocolDelegate {
         labelWelcome.topToBottom(of: imageView, offset: 30)
         labelWelcome.leading(to: imageView)
         labelWelcome.trailing(to: imageView)
-        //labelWelcome.height(50)
+        labelWelcome.height(50)
         
         txtUsername.topToBottom(of: labelWelcome, offset: 30)
         txtUsername.leading(to: imageView)

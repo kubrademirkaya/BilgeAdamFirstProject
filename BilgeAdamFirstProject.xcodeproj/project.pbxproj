@@ -7,23 +7,41 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E040230C2A759A9F0055A1CC /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = E040230B2A759A9F0055A1CC /* SnapKit */; };
+		E04023442A77E0300055A1CC /* SliderSampleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E04023432A77E0300055A1CC /* SliderSampleVC.swift */; };
 		E08771B72A759567009B416F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E08771B62A759567009B416F /* AppDelegate.swift */; };
 		E08771B92A759567009B416F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E08771B82A759567009B416F /* SceneDelegate.swift */; };
-		E08771BB2A759567009B416F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E08771BA2A759567009B416F /* ViewController.swift */; };
-		E08771BE2A759567009B416F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E08771BC2A759567009B416F /* Main.storyboard */; };
 		E08771C02A759568009B416F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E08771BF2A759568009B416F /* Assets.xcassets */; };
 		E08771C32A759568009B416F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E08771C12A759568009B416F /* LaunchScreen.storyboard */; };
+		E08771CB2A75974A009B416F /* WelcomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E08771CA2A75974A009B416F /* WelcomeVC.swift */; };
+		E08771CD2A75977F009B416F /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E08771CC2A75977F009B416F /* LoginVC.swift */; };
+		E08771CF2A7597C1009B416F /* ForgotPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E08771CE2A7597C1009B416F /* ForgotPasswordVC.swift */; };
+		E08771D12A7597DE009B416F /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E08771D02A7597DE009B416F /* SignUpVC.swift */; };
+		E08771D32A759813009B416F /* PasswordProtocolDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E08771D22A759813009B416F /* PasswordProtocolDelegate.swift */; };
+		E08771D52A759845009B416F /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E08771D42A759845009B416F /* CustomTextField.swift */; };
+		E08771D72A759860009B416F /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = E08771D62A759860009B416F /* Enums.swift */; };
+		E08771DD2A7599F4009B416F /* TinyConstraints in Frameworks */ = {isa = PBXBuildFile; productRef = E08771DC2A7599F4009B416F /* TinyConstraints */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E04023192A7786980055A1CC /* NunitoSans_10pt-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NunitoSans_10pt-Medium.ttf"; sourceTree = "<group>"; };
+		E040231A2A7786980055A1CC /* NunitoSans_10pt-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NunitoSans_10pt-Regular.ttf"; sourceTree = "<group>"; };
+		E040231B2A7786980055A1CC /* NunitoSans_10pt-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NunitoSans_10pt-SemiBold.ttf"; sourceTree = "<group>"; };
+		E040231C2A7786980055A1CC /* NunitoSans_10pt-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NunitoSans_10pt-Light.ttf"; sourceTree = "<group>"; };
+		E04023432A77E0300055A1CC /* SliderSampleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderSampleVC.swift; sourceTree = "<group>"; };
 		E08771B32A759567009B416F /* BilgeAdamFirstProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BilgeAdamFirstProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E08771B62A759567009B416F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E08771B82A759567009B416F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		E08771BA2A759567009B416F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		E08771BD2A759567009B416F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E08771BF2A759568009B416F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E08771C22A759568009B416F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E08771C42A759568009B416F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E08771CA2A75974A009B416F /* WelcomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeVC.swift; sourceTree = "<group>"; };
+		E08771CC2A75977F009B416F /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		E08771CE2A7597C1009B416F /* ForgotPasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordVC.swift; sourceTree = "<group>"; };
+		E08771D02A7597DE009B416F /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
+		E08771D22A759813009B416F /* PasswordProtocolDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordProtocolDelegate.swift; sourceTree = "<group>"; };
+		E08771D42A759845009B416F /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		E08771D62A759860009B416F /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,12 +49,46 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E08771DD2A7599F4009B416F /* TinyConstraints in Frameworks */,
+				E040230C2A759A9F0055A1CC /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E040230D2A759BA60055A1CC /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E08771D02A7597DE009B416F /* SignUpVC.swift */,
+				E08771CC2A75977F009B416F /* LoginVC.swift */,
+				E08771CE2A7597C1009B416F /* ForgotPasswordVC.swift */,
+				E08771CA2A75974A009B416F /* WelcomeVC.swift */,
+				E04023432A77E0300055A1CC /* SliderSampleVC.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		E040230E2A759BD40055A1CC /* CustomComponents */ = {
+			isa = PBXGroup;
+			children = (
+				E08771D42A759845009B416F /* CustomTextField.swift */,
+				E08771D62A759860009B416F /* Enums.swift */,
+			);
+			path = CustomComponents;
+			sourceTree = "<group>";
+		};
+		E040230F2A759C5A0055A1CC /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E040231C2A7786980055A1CC /* NunitoSans_10pt-Light.ttf */,
+				E04023192A7786980055A1CC /* NunitoSans_10pt-Medium.ttf */,
+				E040231A2A7786980055A1CC /* NunitoSans_10pt-Regular.ttf */,
+				E040231B2A7786980055A1CC /* NunitoSans_10pt-SemiBold.ttf */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		E08771AA2A759567009B416F = {
 			isa = PBXGroup;
 			children = (
@@ -56,10 +108,12 @@
 		E08771B52A759567009B416F /* BilgeAdamFirstProject */ = {
 			isa = PBXGroup;
 			children = (
+				E040230F2A759C5A0055A1CC /* Resources */,
+				E040230D2A759BA60055A1CC /* Controllers */,
+				E040230E2A759BD40055A1CC /* CustomComponents */,
+				E08771D22A759813009B416F /* PasswordProtocolDelegate.swift */,
 				E08771B62A759567009B416F /* AppDelegate.swift */,
 				E08771B82A759567009B416F /* SceneDelegate.swift */,
-				E08771BA2A759567009B416F /* ViewController.swift */,
-				E08771BC2A759567009B416F /* Main.storyboard */,
 				E08771BF2A759568009B416F /* Assets.xcassets */,
 				E08771C12A759568009B416F /* LaunchScreen.storyboard */,
 				E08771C42A759568009B416F /* Info.plist */,
@@ -83,6 +137,10 @@
 			dependencies = (
 			);
 			name = BilgeAdamFirstProject;
+			packageProductDependencies = (
+				E08771DC2A7599F4009B416F /* TinyConstraints */,
+				E040230B2A759A9F0055A1CC /* SnapKit */,
+			);
 			productName = BilgeAdamFirstProject;
 			productReference = E08771B32A759567009B416F /* BilgeAdamFirstProject.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +169,10 @@
 				Base,
 			);
 			mainGroup = E08771AA2A759567009B416F;
+			packageReferences = (
+				E08771DB2A7599F4009B416F /* XCRemoteSwiftPackageReference "TinyConstraints" */,
+				E040230A2A759A9F0055A1CC /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = E08771B42A759567009B416F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -127,7 +189,6 @@
 			files = (
 				E08771C32A759568009B416F /* LaunchScreen.storyboard in Resources */,
 				E08771C02A759568009B416F /* Assets.xcassets in Resources */,
-				E08771BE2A759567009B416F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,23 +199,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E08771BB2A759567009B416F /* ViewController.swift in Sources */,
+				E08771D12A7597DE009B416F /* SignUpVC.swift in Sources */,
+				E08771D32A759813009B416F /* PasswordProtocolDelegate.swift in Sources */,
+				E08771D72A759860009B416F /* Enums.swift in Sources */,
 				E08771B72A759567009B416F /* AppDelegate.swift in Sources */,
+				E08771CF2A7597C1009B416F /* ForgotPasswordVC.swift in Sources */,
 				E08771B92A759567009B416F /* SceneDelegate.swift in Sources */,
+				E08771CB2A75974A009B416F /* WelcomeVC.swift in Sources */,
+				E04023442A77E0300055A1CC /* SliderSampleVC.swift in Sources */,
+				E08771CD2A75977F009B416F /* LoginVC.swift in Sources */,
+				E08771D52A759845009B416F /* CustomTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		E08771BC2A759567009B416F /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E08771BD2A759567009B416F /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		E08771C12A759568009B416F /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -292,7 +352,6 @@
 				INFOPLIST_FILE = BilgeAdamFirstProject/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -320,7 +379,6 @@
 				INFOPLIST_FILE = BilgeAdamFirstProject/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -358,6 +416,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E040230A2A759A9F0055A1CC /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		E08771DB2A7599F4009B416F /* XCRemoteSwiftPackageReference "TinyConstraints" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/roberthein/TinyConstraints.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E040230B2A759A9F0055A1CC /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E040230A2A759A9F0055A1CC /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		E08771DC2A7599F4009B416F /* TinyConstraints */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E08771DB2A7599F4009B416F /* XCRemoteSwiftPackageReference "TinyConstraints" */;
+			productName = TinyConstraints;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E08771AB2A759567009B416F /* Project object */;
 }

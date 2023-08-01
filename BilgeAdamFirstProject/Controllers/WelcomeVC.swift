@@ -25,41 +25,30 @@ class WelcomeVC: UIViewController {
     
     private lazy var lblWelcome:UILabel = {
         let label = UILabel()
-        label.textColor = .black
+        label.textColor = #colorLiteral(red: 0.5607843137, green: 0.2470588235, blue: 0.3647058824, alpha: 1)
+        label.text = "Hoşgeldiniz"
+        label.font = UIFont(name: "NunitoSans_10pt-SemiBold", size: 30)
+        label.textAlignment = .center
         label.numberOfLines = 0
-        label.text = "Lorem Ipsum "
         //her component için bu yazılır. Constraints ayarlanabilir hale getiriyor.
         //label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
     
-    private lazy var txtUserMessage:UITextField = {
-        let tf = UITextField()
+    private lazy var txtUserMessage:CustomTextField = {
+        let tf = CustomTextField()
         tf.placeholder = "Mesaj girin:"
-        //color eklerken #colorLiteral() ile özelleştirebiliriz.
-        //Assetsten image gibi color eklenebiliyor. O şekilde color set ekleyip çağırabiliriz.
-        tf.textColor = .white
-        tf.font = UIFont(name: "AvenirNext-Bold", size: 24)
-        tf.layer.borderWidth = 0.5
-        //cgColor olarak gelir, UI kütüphanesinden gelmez. Renkler cgColor türünde verilmeli
-        tf.layer.borderColor = UIColor.white.cgColor
-        tf.layer.cornerRadius = 8
-        let imageView = UIImageView(frame: CGRect(x: 11, y: 11, width: 22, height: 22))
-        imageView.image = UIImage(systemName: "person.fill")
-        imageView.tintColor = .black
-        imageView.contentMode = .scaleAspectFit
-        let leftView = UIView(frame: CGRect(x: 0, y: 0, width: 44, height: 44))
-        leftView.addSubview(imageView)
-        tf.leftView = leftView
-        tf.leftViewMode = .always
-        tf.delegate = self
+        
+        tf.viewSide = .left(image: UIImage(systemName: "person.fill")!)
+        
         return tf
     }()
     
     private lazy var btnNext:UIButton = {
         let btn = UIButton()
         btn.setTitle("Mesajı Göster", for: .normal)
-        btn.backgroundColor = #colorLiteral(red: 0.2549019608, green: 0.6117647059, blue: 1, alpha: 1)
+        btn.setTitleColor( #colorLiteral(red: 0.8588235294, green: 0.8, blue: 0.9294117647, alpha: 1), for: .normal)
+        btn.backgroundColor = #colorLiteral(red: 0.5607843137, green: 0.2470588235, blue: 0.3647058824, alpha: 1)
         btn.addTarget(self, action: #selector(btnNextTapped), for: .touchUpInside)
         btn.layer.borderWidth = 0.5
         btn.layer.cornerRadius = 8
@@ -70,8 +59,7 @@ class WelcomeVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.view.backgroundColor = .white
-        self.title = "Hoş Geldiniz"
+        self.view.backgroundColor = #colorLiteral(red: 0.09623382241, green: 0.07863570005, blue: 0.1982927024, alpha: 1)
         
         setupViews()
         //Swift core Layout kütüphanesi ile yazılan layout fonksiyonu

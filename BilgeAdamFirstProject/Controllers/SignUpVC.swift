@@ -23,103 +23,61 @@ class SignUpVC: UIViewController {
         imageView.contentMode = .scaleAspectFit
         imageView.backgroundColor = .white
         imageView.image = UIImage(named: "appleLogo")
+        imageView.layer.cornerRadius = 8
         return imageView
     }()
     
     private lazy var labelSignUp:UILabel = {
         let label = UILabel()
-        label.textColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
+        label.textColor = #colorLiteral(red: 0.5607843137, green: 0.2470588235, blue: 0.3647058824, alpha: 1)
         label.text = "Kayıt Ol"
-        label.font = UIFont(name: Font.avenirNextBold.rawValue, size: 25)
+        label.font = UIFont(name: Font.semiBold.rawValue, size: 30)
         label.textAlignment = .center
         return label
     }()
     
-    private lazy var txtUsername:UITextField = {
-        let textField = UITextField()
+    private lazy var txtUsername:CustomTextField = {
+        let textField = CustomTextField()
         textField.placeholder = "Kullanıcı adı"
-        textField.font = UIFont(name: Font.avenirNext.rawValue, size: 16)
-        textField.textAlignment = .center
-        textField.layer.borderWidth = 0.5
-        textField.layer.borderColor = UIColor.gray.cgColor
-        textField.layer.cornerRadius = 8
-        let smallImage = UIImageView(frame: CGRect(x: 11, y: 11, width: 22, height: 22))
-        smallImage.image = UIImage(systemName: "person")
-        smallImage.tintColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
-        smallImage.contentMode = .scaleAspectFit
-        let leftView = UIView(frame: CGRect(x: 0, y: 0, width: 44, height: 44))
-        leftView.addSubview(smallImage)
-        textField.leftView = leftView
-        textField.leftViewMode = .always
+        
+        textField.viewSide = .left(image: UIImage(systemName: "person.fill")!)
+        
         return textField
     }()
     
-    private lazy var txtEmail:UITextField = {
-        let textField = UITextField()
+    private lazy var txtEmail:CustomTextField = {
+        let textField = CustomTextField()
         textField.placeholder = "E-mail"
-        textField.font = UIFont(name: Font.avenirNext.rawValue, size: 16)
-        textField.textAlignment = .center
-        textField.layer.borderWidth = 0.5
-        textField.layer.borderColor = UIColor.gray.cgColor
-        textField.layer.cornerRadius = 8
-        let smallImage = UIImageView(frame: CGRect(x: 11, y: 11, width: 22, height: 22))
-        smallImage.image = UIImage(systemName: "mail")
-        smallImage.tintColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
-        smallImage.contentMode = .scaleAspectFit
-        let leftView = UIView(frame: CGRect(x: 0, y: 0, width: 44, height: 44))
-        leftView.addSubview(smallImage)
-        textField.leftView = leftView
-        textField.leftViewMode = .always
+        
+        textField.viewSide = .left(image: UIImage(systemName: "mail")!)
+        
         return textField
     }()
     
-    private lazy var txtPassword:UITextField = {
-        let textField = UITextField()
+    private lazy var txtPassword:CustomTextField = {
+        let textField = CustomTextField()
         textField.placeholder = "Şifre"
-        textField.font = UIFont(name: Font.avenirNext.rawValue, size: 16)
-        textField.textAlignment = .center
-        textField.layer.borderWidth = 0.5
-        textField.layer.borderColor = UIColor.gray.cgColor
-        textField.layer.cornerRadius = 8
-        let smallImage = UIImageView(frame: CGRect(x: 11, y: 11, width: 22, height: 22))
-        smallImage.image = UIImage(systemName: "key")
-        smallImage.tintColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
-        smallImage.contentMode = .scaleAspectFit
-        let leftView = UIView(frame: CGRect(x: 0, y: 0, width: 44, height: 44))
-        leftView.addSubview(smallImage)
-        textField.leftView = leftView
-        textField.leftViewMode = .always
-        textField.isSecureTextEntry = true
+        
+        textField.viewSide = .left(image: UIImage(systemName: "key")!)
+        
         return textField
     }()
     
-    private lazy var txtValidPassword:UITextField = {
-        let textField = UITextField()
+    private lazy var txtValidPassword:CustomTextField = {
+        let textField = CustomTextField()
         textField.placeholder = "Şifre Doğrulama"
-        textField.font = UIFont(name: Font.avenirNext.rawValue, size: 16)
-        textField.textAlignment = .center
-        textField.layer.borderWidth = 0.5
-        textField.layer.borderColor = UIColor.gray.cgColor
-        textField.layer.cornerRadius = 8
-        let smallImage = UIImageView(frame: CGRect(x: 11, y: 11, width: 22, height: 22))
-        smallImage.image = UIImage(systemName: "key")
-        smallImage.tintColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
-        smallImage.contentMode = .scaleAspectFit
-        let leftView = UIView(frame: CGRect(x: 0, y: 0, width: 44, height: 44))
-        leftView.addSubview(smallImage)
-        textField.leftView = leftView
-        textField.leftViewMode = .always
-        textField.isSecureTextEntry = true
+        
+        textField.viewSide = .left(image: UIImage(systemName: "key")!)
+        
         return textField
     }()
     
     private lazy var btnSignUp:UIButton = {
         let button = UIButton()
         button.setTitle("Kayıt Ol", for: .normal)
-        button.backgroundColor = #colorLiteral(red: 0.2549019608, green: 0.6117647059, blue: 1, alpha: 1)
-        button.setTitleColor(.white, for: .normal)
+        button.backgroundColor = #colorLiteral(red: 0.5607843137, green: 0.2470588235, blue: 0.3647058824, alpha: 1)
+        button.setTitleColor( #colorLiteral(red: 0.8588235294, green: 0.8, blue: 0.9294117647, alpha: 1), for: .normal)
         button.layer.borderWidth = 0.5
-        button.layer.borderColor = UIColor.blue.cgColor
         button.layer.cornerRadius = 8
         button.addTarget(self, action: #selector(btnSignUpTapped), for: .touchUpInside)
         return button
@@ -128,7 +86,7 @@ class SignUpVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.view.backgroundColor = .white
+        self.view.backgroundColor = #colorLiteral(red: 0.09623382241, green: 0.07863570005, blue: 0.1982927024, alpha: 1)
         
         setupViews()
     }
